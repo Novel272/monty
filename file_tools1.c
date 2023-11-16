@@ -65,14 +65,14 @@ int parse_line(char *buffe, int line_numbe, int format)
 	opcod = strtok(buffe, delim);
 	if (opcod == NULL)
 		return (format);
-	value = strtok(NULL, delim);
+	valu = strtok(NULL, delim);
 
 	if (strcmp(opcod, "stack") == 0)
 		return (0);
 	if (strcmp(opcod, "queue") == 0)
 		return (1);
 
-	find_func(opcod, value, line_numbe, format);
+	find_func(opcod, valu, line_numbe, format);
 	return (format);
 }
 
